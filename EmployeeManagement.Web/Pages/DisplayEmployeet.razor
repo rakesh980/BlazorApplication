@@ -1,0 +1,24 @@
+﻿
+@inherits DisplayEmployeeBase
+
+    <div class="card m-3" >
+        <div class="card-header">
+            <h4>
+            <input type="checkbox" @onchange="CheckBoxChanged"/>
+            @Employee.FirstName  @Employee.LastName</h4>
+        </div>
+
+        <img class="card-img-top imageThumbnail" src="@Employee.PhotoPath" />
+
+        @if (ShowFooter)
+        {
+            <div class="card-footer row">
+                <a href="@($"employeedetails/{Employee.EmployeeId}")" class="btn btn-primary m-1">View</a>
+
+                <a href="@($"editemployee/{Employee.EmployeeId}")" class="btn btn-primary m-1">Edit</a>
+
+                <a href="#" class="btn btn-danger m-1">Delete</a>
+            </div>
+        }
+
+    </div>
