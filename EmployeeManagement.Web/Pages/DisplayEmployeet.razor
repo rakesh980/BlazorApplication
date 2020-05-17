@@ -1,11 +1,11 @@
 ﻿
 @inherits DisplayEmployeeBase
 
-    <div class="card m-3" >
+    <div style="margin-right:20px; margin-bottom:25px;">
         <div class="card-header">
-            <h4>
+            <h5>
             <input type="checkbox" @onchange="CheckBoxChanged"/>
-            @Employee.FirstName  @Employee.LastName</h4>
+            @Employee.FirstName  @Employee.LastName</h5>
         </div>
 
         <img class="card-img-top imageThumbnail" src="@Employee.PhotoPath" />
